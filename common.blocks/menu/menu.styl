@@ -1,8 +1,6 @@
 .menu
     background-color #ff3e2c
     display inline-block
-    margin 0px
-    padding 0;
     list-style none;
     width 1150px;
     margin 0 auto;
@@ -10,15 +8,27 @@
     line-height 21px
     padding 30px 0
     margin-bottom: -49px
+    position relative
+    z-index 100
 
     &__item
         float left
+        display inline-block
         padding-right 130px
 
     &__link
         text-decoration none;
-        display block;
+        display inline-block;
         color #ffffff;
+
+    &__item:before
+        content ""
+        width 2px
+        height 5px
+        background-color #ffffff
+        display inline-block
+        vertical-align super
+        margin-right 10px
 
     &__item:first-child
         padding-left 50px

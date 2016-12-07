@@ -80,7 +80,7 @@ module.exports = {
                                         elem: 'link',
                                         tag: "a",
                                         attrs: {href: "#"},
-                                        content: "'  О КОМПАНИИ"
+                                        content: "О КОМПАНИИ"
                                     }
                                 },
                                 {
@@ -90,7 +90,7 @@ module.exports = {
                                         elem: 'link',
                                         tag: "a",
                                         attrs: {href: "#"},
-                                        content: "'  УСЛУГИ"
+                                        content: "УСЛУГИ"
                                     }
                                 },
                                 {
@@ -100,7 +100,7 @@ module.exports = {
                                         elem: 'link',
                                         tag: "a",
                                         attrs: {href: "#"},
-                                        content: "'  НОВОСТИ"
+                                        content: "НОВОСТИ"
                                     }
                                 },
                                 {
@@ -110,7 +110,7 @@ module.exports = {
                                         elem: 'link',
                                         tag: "a",
                                         attrs: {href: "#"},
-                                        content: "'  ПОЛЕЗНАЯ ИНФОРМАЦИЯ"
+                                        content: "ПОЛЕЗНАЯ ИНФОРМАЦИЯ"
                                     }
                                 },
                                 {
@@ -120,7 +120,7 @@ module.exports = {
                                         elem: 'link',
                                         tag: "a",
                                         attrs: {href: "#"},
-                                        content: "'  КОНТАКТЫ"
+                                        content: "КОНТАКТЫ"
                                     }
                                 }
                             ]
@@ -132,119 +132,132 @@ module.exports = {
         },
         {
             block: "slider",
-            // content: "Представление интересов в арбитражном суде"
-        },
-        {
-            block: "about",
-            mix: {block: 'clear'},
-            content: [
-                {
-                    elem: "line"
-                },
-                {
-                    elem: "about_info",
-                    content: "Наша компания действует более 3-х лет на рынке предоставления юридических услуг. Мы ориентированы на малый и средний бизнес, а также на оказание правовой помощи физическим лицам по любым вопросам. Наша миссия: предоставление высококачественных юридических услуг по минимальным ценам за счет исключения непрофильных расходов."
-                }
-
-            ]
-        },
-        {
-            block: "main_services",
-            mix: {block: 'clear'},
-            content: [
-                {
-                    elem: "title",
-                    content: "НАШИ ОСНОВНЫЕ УСЛУГИ"
-                },
-                {
-                    elem: "line"
-                },
-                {
-                    block: "description",
-                    content:[
+            js : true,
+            content: (function(){
+                var result = [];
+                for (var i = 0; i < 4; i++) {
+                    result.push(
                         {
-                            elem: "private_person",
-                            tag: "ul",
-                            content: [
-                                "Для физических лиц",
+                            elem : "item",
+                            elemMods : {icon : "business"},
+                            content : [
                                 {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Судебные споры"
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Трудовое право"
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Сопровождение сделок"
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Семейное право"
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Административное право"
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Договоры"
-                                },
-                            ]
-                        },
-                        {
-                            elem: "private_person",
-                            tag: "ul",
-                            content: [
-                                "Для юридических лиц",
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Представление интересов в суде"
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Корпоративное право"
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Трудовое право"
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Публичное/административное "
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "право"
-                                },
-                                {
-                                    elem: 'item',
-                                    tag: 'li',
-                                    content: "Таможенное право/ВЭД"
-                                },
+                                    block : 'box',
+                                    mods : {template : "style"},
+                                    content : [
+                                        {
+                                            elem : 'box-title',
+                                            content : [
+                                                {
+                                                    elem : 'title',
+                                                    elemMods : {color : "white", size : "big"},
+                                                    content : 'Представление интересов <br >в арбитражном суде'
+                                                },
+                                                {
+                                                    elem : 'line'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            elem : 'content',
+                                            content : {
+                                                block : "short-box",
+                                                content : [
+                                                    {
+                                                        elem : "content",
+                                                        content : "Правовая поддержка корпоративных клиентов и предоставление услуг юридического аутсорсинга на выгодных условиях"
+                                                    },
+                                                    {
+                                                        block : "link",
+                                                        tag : "a",
+                                                        attrs : {href : "#"},
+                                                        content : "ПОДРОБНЕЕ"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
                             ]
                         }
-                    ]
+                    );
+                }
+
+                return result;
+            })()
+        },
+        {
+            block : 'box',
+            content : [
+                {
+                    elem : 'line'
+                },
+                {
+                    elem : 'content',
+                    content : "Наша компания действует более 3-х лет на рынке предоставления юридических услуг. Мы ориентированы на малый и средний бизнес, а также на оказание правовой помощи физическим лицам по любым вопросам. Наша миссия: предоставление высококачественных юридических услуг по минимальным ценам за счет исключения непрофильных расходов."
                 }
             ]
         },
+
+        {
+            block : 'box',
+            mods : {template : "style"},
+            content : [
+                {
+                    elem : "box-title",
+                    content : [
+                        {
+                            elem : 'title',
+                            content : 'Наши основные услуги'
+                        },
+                        {
+                            elem : 'line'
+                        }
+                    ]
+                },
+                {
+                    elem : 'content',
+                    content : {
+                        block: "description",
+                        content: [
+                            {
+                                block : "list",
+                                mods : {template : "line"},
+                                title : "Для физических лиц",
+                                items : [
+                                    "Судебные споры",
+                                    "Трудовое право",
+                                    "Сопровождение сделок",
+                                    "Семейное право",
+                                    "Административное право",
+                                    "Договоры"
+                                ]
+                            },
+                            {
+                                block : "list",
+                                mods : {template : "line"},
+                                title : "Для юридических лиц",
+                                items : [
+                                    "Представление интересов в суде",
+                                    "Корпоративное право",
+                                    "Трудовое право",
+                                    "Публичное/административное",
+                                    "Таможенное право/ВЭД",
+                                    "Бухгалтерский учет"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+
         {
             block: "client",
             mix: {block: 'clear'},
             content: {
                 elem : "inner",
+                mix: {block: 'clear'},
                 content: [
                     {
                         elem: "title",
@@ -424,13 +437,172 @@ module.exports = {
         },
         {
             block: 'footer',
+            mix: {block: 'clear'},
             content: [
                 {
                     elem: "logo"
                 },
                 {
-
-                }
+                    elem: "about",
+                    tag: "ul",
+                    content: [
+                        "О НАС",
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "О компании"
+                            }
+                        },
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Новости"
+                            }
+                        },
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Статьи"
+                            }
+                        },
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Отзывы"
+                            }
+                        },
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Полезная информация"
+                            }
+                        },
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Контакты"
+                            }
+                        },
+                     ]
+                },
+                {
+                    elem: "about",
+                    tag: "ul",
+                    content: [
+                        "УСЛУГИ",
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Физическим лицам"
+                            }
+                        },
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Юридическим лицам"
+                            }
+                        },
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Абонентское обслуживание"
+                            }
+                        },
+                    ]
+                },
+                {
+                    elem: "about",
+                    tag: "ul",
+                    content: [
+                        "Подпишитесь на наши<br>новости",
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'input',
+                                tag: "input",
+                                attrs:  {placeholder: "Оставьте свой  e-mail адрес"}
+                            }
+                        },
+                        {
+                            elem: 'item',
+                            tag: 'li',
+                            content: {
+                                elem: 'button',
+                                tag: "button",
+                                content: "ПОДПИСАТЬСЯ"
+                            }
+                        },
+                    ]
+                },
+                {
+                    block: "contact",
+                    content: [
+                        {
+                            elem: "telephone",
+                            elemMods: {color: "white"},
+                            tag: "a",
+                            attrs: {href: "tel:+7(495) 988-44-22"},
+                            content: "+7(495) 988-44-22"
+                        },
+                        {
+                            elem: "call",
+                            content: "Заказать звонок"
+                        }
+                    ]
+                },
+                {
+                    block: "contact",
+                    content: [
+                        {
+                            elem: "telephone",
+                            elemMods: {color: "white"},
+                            tag: "a",
+                            attrs: {href: "tel:8 (800) 350-50-20"},
+                            content: "8 (800) 350-50-20"
+                        },
+                        {
+                            elem: "call",
+                            content: "nfo@almakspravo.ru"
+                        }
+                    ]
+                },
             ]
         }
     ]
