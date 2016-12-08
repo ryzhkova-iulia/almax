@@ -423,56 +423,6 @@ module.exports = {
                 ]
             }
         },
-/*        {
-            block: "question",
-            content: [
-                {
-                    elem: "title",
-                    content: "ВОПРОС-ОТВЕТ"
-                },
-                {
-                    elem: "line"
-                },
-                {
-                    elem: "answer",
-                    content: [
-                        {
-                            elem: "question_text",
-                            content: "Собственные квартиры мой дом расселяют Обязан ли я платить коммунальные услуги так как дом аварийный?"
-                        },
-                        {
-                            elem: "answer_text",
-                            content: "Действующее в настоящее время законодательство не содержит нормы, которая позволяла бы собственникам и нанимателям жилья в аварийном доме автоматически прекратить внесение платы за содержание и ремонт жилья, равно как и за коммунальные услуги, с момента присвоения дому такого статуса."
-                        },
-                        {
-                            elem: "link",
-                            tag: "a",
-                            attrs: {href: "#"},
-                            content: "СМОТРЕТЬ ПОЛНОСТЬЮ"
-                        }
-                    ]
-                },
-                {
-                    elem: "answer",
-                    content: [
-                        {
-                            elem: "question_text",
-                            content: "Можно ли подать на развод с временным документом,который во время изготовления паспорта заменяет паспорт?"
-                        },
-                        {
-                            elem: "answer_text",
-                            content: "По вопросу временного документа. В соответствии с пунктом 41 Приказом ФМС России от 7 декабря 2009 года № 339 «Об утверждении Административного регламента Федеральной миграционной службы по предоставлению государственной услуги по выдаче, замене и по исполнению государственной функции по учету "
-                        },
-                        {
-                            elem: "link",
-                            tag: "a",
-                            attrs: {href: "#"},
-                            content: "СМОТРЕТЬ ПОЛНОСТЬЮ"
-                        }
-                    ]
-                }
-            ]
-        },*/
         {
             block : 'box',
             mods : {template : "style"},
@@ -623,61 +573,98 @@ module.exports = {
                 ]
             }
         },
- /*       {
-            block: "news",
-            mix: {block: 'clear'},
+        {
+            block: "footer",
             content: {
-                elem: "inner",
-                mix: {block: 'clear'},
-                content: [
+                block : 'box',
+                content : [
                     {
-                        elem: "title",
-                        content: "НОВОСТИ"
-                    },
-                    {
-                        elem: "line"
-                    },
-                    {
-                        block: "blog",
-                        mix: {block: 'clear'},
+                        block: "logo-footer",
                         content: [
                             {
-                                elem: "date",
-                                content: "22 августа 2016"
-                            },
-                            {
-                                elem: "title",
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "Знания, накопленные за 17 лет практики, мы собрали в Базе знаний BLS."
+                                elem: "logo",
                             },
                             {
                                 elem: "text",
-                                content: "Работодатель вправе изменить на постоянной основе условия трудового договора по своему усмотрению. Но в каких случаях и в каком порядке? Разберем. В мае 2012 года открыли новое направление &#34;Выдача допусков СРО&#34;, что повлияло на дальнейшее направление развияти компании. В тот же год было "
+                                content:"© 2016. «Алмакс-Право»<br>Все права защищены"
+                            },
+                            {
+                                elem: "icon"
                             }
                         ]
                     },
                     {
-                        block: "blog",
-                        mix: {block: 'clear'},
-                        content: [
+                        block : "list",
+                        mods : {template : "link"},
+                        title : "о нас",
+                        items : [
                             {
-                                elem: "date",
-                                content: "22 августа 2016"
-                            },
-                            {
-                                elem: "title",
+                                elem: 'link',
                                 tag: "a",
                                 attrs: {href: "#"},
-                                content: "Знания, накопленные за 17 лет практики, мы собрали в Базе знаний BLS."
+                                content: "О компании"
                             },
-
+                            {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Новости"
+                            },
+                            {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Статьи"
+                            },
+                            {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Отзывы"
+                            },
+                            {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Полезная информация"
+                            },
+                            {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Контакты"
+                            }
+                        ]
+                    },
+                    {
+                        block : "list",
+                        mods : {template : "link"},
+                        title : "услуги",
+                        items : [
+                            {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Физическим лицам"
+                            },
+                            {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Юридическим лицам"
+                            },
+                            {
+                                elem: 'link',
+                                tag: "a",
+                                attrs: {href: "#"},
+                                content: "Абонентское обслуживание"
+                            }
                         ]
                     }
                 ]
             }
-        },*/
-        {
+        },
+/*        {
             block: 'footer',
             mix: {block: 'clear'},
             content: [
@@ -846,6 +833,6 @@ module.exports = {
                     ]
                 },
             ]
-        }
+        }*/
     ]
 };
