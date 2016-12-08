@@ -6,6 +6,7 @@ module.exports = {
         { elem: 'meta', attrs: { name: 'description', content: '' } },
         { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
         { elem: 'css', url: 'https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&amp;subset=cyrillic' },
+        { elem: 'css', url: 'https://fonts.googleapis.com/css?family=PT+Mono' },
         { elem: 'css', url: 'index.min.css' }
     ],
     scripts: [{ elem: 'js', url: 'index.min.js' }],
@@ -251,37 +252,134 @@ module.exports = {
                 }
             ]
         },
-
         {
-            block: "client",
-            mix: {block: 'clear'},
-            content: {
-                elem : "inner",
-                mix: {block: 'clear'},
-                content: [
+            block : 'paper',
+            content : {
+                block : 'box',
+                mods : {template : 'paper'},
+                content : [
                     {
-                        elem: "title",
-                        content: "НАШИ КЛИЕНТЫ"
+                        elem : 'title',
+                        content : 'Наши клиенты'
                     },
                     {
-                        elem: "line",
+                        elem : 'line'
                     },
                     {
-                        elem: "logo",
-                        elemMods: {icon: "okapia"},
-                    },
-                    {
-                        elem: "logo",
-                        elemMods: {icon: "karno"},
-                    },
-                    {
-                        elem: "logo",
-                        elemMods: {icon: "bonne"},
-                    },
+                        elem : 'content',
+                        content : {
+                            block : 'client',
+                            js : true,
+                            content : [
+                                {
+                                    elem : 'item',
+                                    tag : 'a',
+                                    attrs : {href : "#"},
+                                    content : [
+                                        {
+                                            elem : 'img',
+                                            tag : 'img',
+                                            attrs : {src : "./img/okapia.png"}
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'item',
+                                    tag : 'a',
+                                    attrs : {href : "#"},
+                                    content : [
+                                        {
+                                            elem : 'img',
+                                            tag : 'img',
+                                            attrs : {src : "./img/okapia.png"}
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'item',
+                                    tag : 'a',
+                                    attrs : {href : "#"},
+                                    content : [
+                                        {
+                                            elem : 'img',
+                                            tag : 'img',
+                                            attrs : {src : "./img/okapia.png"}
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'item',
+                                    tag : 'a',
+                                    attrs : {href : "#"},
+                                    content : [
+                                        {
+                                            elem : 'img',
+                                            tag : 'img',
+                                            attrs : {src : "./img/okapia.png"}
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem : 'item',
+                                    tag : 'a',
+                                    attrs : {href : "#"},
+                                    content : [
+                                        {
+                                            elem : 'img',
+                                            tag : 'img',
+                                            attrs : {src : "./img/okapia.png"}
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
                 ]
             }
         },
         {
+            block : 'paper',
+            mix : {block : 'question'},
+            content : {
+                block : 'box',
+                content : [
+                    {
+                        elem : 'title',
+                        elemMods : {color : 'white'},
+                        content : 'ВОПРОС-ОТВЕТ'
+                    },
+                    {
+                        elem : 'line',
+                        elemMods : {color : 'white'}
+                    },
+                    {
+                        elem : 'content',
+                        content : [
+                            {
+                                block: "min-box",
+                                content: [
+                                    {
+                                        elem: "title",
+                                        content: "Собственные квартиры мой дом расселяют Обязан ли я платить коммунальные услуги так как дом аварийный?"
+                                    },
+                                    {
+                                        elem: "answer",
+                                        content: "Действующее в настоящее время законодательство не содержит нормы, которая позволяла бы собственникам и нанимателям жилья в аварийном доме автоматически прекратить внесение платы за содержание и ремонт жилья, равно как и за коммунальные услуги, с момента присвоения дому такого статуса."
+                                    },
+                                    {
+                                        block: "link",
+                                        tag: "a",
+                                        attrs: {href: "#"},
+                                        content: "СМОТРЕТЬ ПОЛНОСТЬЮ"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+/*        {
             block: "question",
             content: [
                 {
@@ -330,7 +428,7 @@ module.exports = {
                     ]
                 }
             ]
-        },
+        },*/
         {
             block: "comment",
             mix: {block: 'clear'},
