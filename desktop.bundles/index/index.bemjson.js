@@ -354,27 +354,71 @@ module.exports = {
                     },
                     {
                         elem : 'content',
-                        content : [
-                            {
-                                block: "min-box",
-                                content: [
-                                    {
-                                        elem: "title",
-                                        content: "Собственные квартиры мой дом расселяют Обязан ли я платить коммунальные услуги так как дом аварийный?"
-                                    },
-                                    {
-                                        elem: "answer",
-                                        content: "Действующее в настоящее время законодательство не содержит нормы, которая позволяла бы собственникам и нанимателям жилья в аварийном доме автоматически прекратить внесение платы за содержание и ремонт жилья, равно как и за коммунальные услуги, с момента присвоения дому такого статуса."
-                                    },
-                                    {
-                                        block: "link",
-                                        tag: "a",
-                                        attrs: {href: "#"},
-                                        content: "СМОТРЕТЬ ПОЛНОСТЬЮ"
-                                    }
-                                ]
-                            }
-                        ]
+                        content : {
+                            block : 'table',
+                            content : [
+                                {
+                                    elem : "row",
+                                    content : [
+                                        {
+                                            block: "min-box",
+                                            mix : {block : 'table', elem : "cell"},
+                                            content: [
+                                                {
+                                                    elem: "title",
+                                                    content: "Собственные квартиры мой дом расселяют Обязан ли я платить коммунальные услуги так как дом аварийный?"
+                                                },
+                                                {
+                                                    elem: "content",
+                                                    content: [
+                                                        {
+                                                            elem: "text",
+                                                            content: "Действующее в настоящее время законодательство не содержит нормы, которая позволяла бы собственникам и нанимателям жилья в аварийном доме автоматически прекратить внесение платы за содержание и ремонт жилья, равно как и за коммунальные услуги, с момента присвоения дому такого статуса."
+                                                        },
+                                                        {
+                                                            block: "link",
+                                                            mods: {color : "green", position : "bottom"},
+                                                            tag: "a",
+                                                            attrs: {href: "#"},
+                                                            content: "СМОТРЕТЬ ПОЛНОСТЬЮ"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            elem : 'space'
+                                        },
+                                        {
+                                            block: "min-box",
+                                            mix : {block : 'table', elem : "cell"},
+                                            content: [
+                                                {
+                                                    elem: "title",
+                                                    content: "Можно ли подать на развод с временным документом,который во время изготовления паспорта заменяет паспорт?"
+                                                },
+                                                {
+                                                    elem: "content",
+                                                    content: [
+                                                        {
+                                                            elem: "text",
+                                                            content: "По вопросу временного документа. В соответствии с пунктом 41 Приказом ФМС России от 7 декабря 2009 года № 339 «Об утверждении Административного регламента Федеральной миграционной службы по предоставлению государственной услуги по выдаче, замене и по исполнению государственной функции по учету паспортов гражданина"
+                                                        },
+                                                        {
+                                                            block: "link",
+                                                            mods: {color : "green" , position : "bottom"},
+                                                            tag: "a",
+                                                            attrs: {href: "#"},
+                                                            content: "СМОТРЕТЬ ПОЛНОСТЬЮ"
+                                                        }
+                                                    ]
+                                                },
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     }
                 ]
             }
@@ -430,56 +474,156 @@ module.exports = {
             ]
         },*/
         {
-            block: "comment",
-            mix: {block: 'clear'},
-            content: [
+            block : 'box',
+            mods : {template : "style"},
+            content : [
                 {
-                    elem: "title",
-                    content: "ОТЗЫВЫ И ПУБЛИКАЦИИ"
-                },
-                {
-                    elem: "line"
-                },
-                {
-                    block: "article",
-                    content:[
+                    elem : "box-title",
+                    content : [
                         {
-                            elem: "date",
-                            content: "26 <br> февраля<br>2016",
+                            elem : 'title',
+                            content : 'Отзывы и публикации'
                         },
                         {
-                            elem: "title",
-                            tag: "a",
-                            attrs: {href: "#"},
-                            content: "Работодатель изменяет условия трудового договора"
-                        },
-                        {
-                            elem: "text",
-                            content: "Работодатель вправе изменить на постоянной основе условия трудового договора по своему усмотрению. Но в каких случаях и в каком порядке? "
-                        },
-                        {
-                            elem: "date",
-                            content: "18 <br>января<br>2016",
-                        },
-                        {
-                            elem: "title",
-                            tag: "a",
-                            attrs: {href: "#"},
-                            content: "Знания, накопленные за 17 лет практики, мы собрали в Базе знаний"
-                        },
-                        {
-                            elem: "text",
-                            content: "BLS защищает интересы работодателей в сфере применения трудового законодательства РФ."
+                            elem : 'line'
                         }
                     ]
                 },
                 {
-                    block: "gratitude"
-
-                }
+                    elem : 'content',
+                    content : [
+                        {
+                            block: "description",
+                            mods: {box: "min"},
+                            content: [
+                                {
+                                    block: "blog",
+                                    content: [
+                                        {
+                                            elem: "date",
+                                            elemMods : {size : "big"},
+                                            content: "26<br >февраля<br >2016"
+                                        },
+                                        {
+                                            elem: "title",
+                                            tag: "a",
+                                            attrs: {href: "#"},
+                                            content: "Работодатель изменяет условия трудового договора"
+                                        },
+                                        {
+                                            elem: "text",
+                                            content: "Работодатель вправе изменить на постоянной основе условия трудового договора по своему усмотрению. Но в каких случаях и в каком порядке? Разберем."
+                                        }
+                                    ]
+                                },
+                                {
+                                    block: "blog",
+                                    content: [
+                                        {
+                                            elem: "date",
+                                            elemMods : {size : "big"},
+                                            content: "18<br >января<br >2016"
+                                        },
+                                        {
+                                            elem: "title",
+                                            tag: "a",
+                                            attrs: {href: "#"},
+                                            content: "Знания, накопленные за 17 лет практики, мы собрали в Базе знаний BLS."
+                                        },
+                                        {
+                                            elem: "text",
+                                            content: "BLS защищает интересы работодателей в сфере применения трудового законодательства РФ."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            block: 'slider-one',
+                            js: true,
+                            content: [
+                                {
+                                    elem: 'item',
+                                    tag: 'a',
+                                    attrs: {href: "#"},
+                                    content: [
+                                        {
+                                            elem: 'img',
+                                            tag: 'img',
+                                            attrs: {src: "./img/letter.png"}
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem: 'item',
+                                    tag: 'a',
+                                    attrs: {href: "#"},
+                                    content: [
+                                        {
+                                            elem: 'img',
+                                            tag: 'img',
+                                            attrs: {src: "./img/letter.png"}
+                                        }
+                                    ]
+                                },{
+                                    elem: 'item',
+                                    tag: 'a',
+                                    attrs: {href: "#"},
+                                    content: [
+                                        {
+                                            elem: 'img',
+                                            tag: 'img',
+                                            attrs: {src: "./img/letter.png"}
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
             ]
         },
         {
+            block : 'paper',
+            content : {
+                block : 'box',
+                mods : {template : 'paper'},
+                content : [
+                    {
+                        elem : 'title',
+                        content : 'НОВОСТИ'
+                    },
+                    {
+                        elem : 'line'
+                    },
+                    {
+                        elem : 'content',
+                        content : [
+                            {
+                                block: "blog",
+                                content: [
+                                    {
+                                        elem: "date",
+                                        content: "26 февраля 2016"
+                                    },
+                                    {
+                                        elem: "title",
+                                        tag: "a",
+                                        attrs: {href: "#"},
+                                        content: "Работодатель изменяет условия трудового договора"
+                                    },
+                                    {
+                                        elem: "text",
+                                        content: "Работодатель вправе изменить на постоянной основе условия трудового договора по своему усмотрению. Но в каких случаях и в каком порядке? Разберем."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+ /*       {
             block: "news",
             mix: {block: 'clear'},
             content: {
@@ -532,7 +676,7 @@ module.exports = {
                     }
                 ]
             }
-        },
+        },*/
         {
             block: 'footer',
             mix: {block: 'clear'},
