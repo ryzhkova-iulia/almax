@@ -550,21 +550,63 @@ module.exports = {
                         elem : 'content',
                         content : [
                             {
-                                block: "blog",
-                                content: [
+                                block : 'box-size',
+                                mods : {size : 'medium'},
+                                content : [
                                     {
-                                        elem: "date",
-                                        content: "26 февраля 2016"
+                                        block: "blog",
+                                        content: [
+                                            {
+                                                elem: "date",
+                                                content: "26 февраля 2016"
+                                            },
+                                            {
+                                                elem: "title",
+                                                tag: "a",
+                                                attrs: {href: "#"},
+                                                content: "Работодатель изменяет условия трудового договора"
+                                            },
+                                            {
+                                                elem: "text",
+                                                content: "Работодатель вправе изменить на постоянной основе условия трудового договора по своему усмотрению. Но в каких случаях и в каком порядке? Разберем."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block : 'box-size',
+                                mods : {size : 'small'},
+                                content : [
+                                    {
+                                        block: "blog",
+                                        content: [
+                                            {
+                                                elem: "date",
+                                                content: "24 июня 2016"
+                                            },
+                                            {
+                                                elem: "title",
+                                                tag: "a",
+                                                attrs: {href: "#"},
+                                                content: "Результат оказанных услуг направлен по электронной почте - договор считается исполненным"
+                                            }
+                                        ]
                                     },
                                     {
-                                        elem: "title",
-                                        tag: "a",
-                                        attrs: {href: "#"},
-                                        content: "Работодатель изменяет условия трудового договора"
-                                    },
-                                    {
-                                        elem: "text",
-                                        content: "Работодатель вправе изменить на постоянной основе условия трудового договора по своему усмотрению. Но в каких случаях и в каком порядке? Разберем."
+                                        block: "blog",
+                                        content: [
+                                            {
+                                                elem: "date",
+                                                content: "12 апреля 2016"
+                                            },
+                                            {
+                                                elem: "title",
+                                                tag: "a",
+                                                attrs: {href: "#"},
+                                                content: "Новые коды ОКВЭД"
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -660,179 +702,72 @@ module.exports = {
                                 content: "Абонентское обслуживание"
                             }
                         ]
-                    }
-                ]
-            }
-        },
-/*        {
-            block: 'footer',
-            mix: {block: 'clear'},
-            content: [
-                {
-                    elem: "logo"
-                },
-                {
-                    elem: "about",
-                    tag: "ul",
-                    content: [
-                        "О НАС",
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
-                                elem: 'link',
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "О компании"
-                            }
-                        },
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
-                                elem: 'link',
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "Новости"
-                            }
-                        },
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
-                                elem: 'link',
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "Статьи"
-                            }
-                        },
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
-                                elem: 'link',
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "Отзывы"
-                            }
-                        },
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
-                                elem: 'link',
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "Полезная информация"
-                            }
-                        },
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
-                                elem: 'link',
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "Контакты"
-                            }
-                        },
-                     ]
-                },
-                {
-                    elem: "about",
-                    tag: "ul",
-                    content: [
-                        "УСЛУГИ",
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
-                                elem: 'link',
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "Физическим лицам"
-                            }
-                        },
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
-                                elem: 'link',
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "Юридическим лицам"
-                            }
-                        },
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
-                                elem: 'link',
-                                tag: "a",
-                                attrs: {href: "#"},
-                                content: "Абонентское обслуживание"
-                            }
-                        },
-                    ]
-                },
-                {
-                    elem: "about",
-                    tag: "ul",
-                    content: [
-                        "Подпишитесь на наши<br>новости",
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
+                    },
+                    {
+                        block : "list",
+                        mods : {template : "link", width: "fix"},
+                        title : "подпишитесь на наши новости",
+                        items : [
+                            {
                                 elem: 'input',
                                 tag: "input",
-                                attrs:  {placeholder: "Оставьте свой  e-mail адрес"}
-                            }
-                        },
-                        {
-                            elem: 'item',
-                            tag: 'li',
-                            content: {
+                                attrs:  {
+                                    placeholder: "Оставьте свой  e-mail адрес",
+                                    type : "email"
+                                }
+                            },
+                            {
                                 elem: 'button',
                                 tag: "button",
                                 content: "ПОДПИСАТЬСЯ"
                             }
-                        },
-                    ]
-                },
-                {
-                    block: "contact",
-                    content: [
-                        {
-                            elem: "telephone",
-                            elemMods: {color: "white"},
-                            tag: "a",
-                            attrs: {href: "tel:+7(495) 988-44-22"},
-                            content: "+7(495) 988-44-22"
-                        },
-                        {
-                            elem: "call",
-                            content: "Заказать звонок"
-                        }
-                    ]
-                },
-                {
-                    block: "contact",
-                    content: [
-                        {
-                            elem: "telephone",
-                            elemMods: {color: "white"},
-                            tag: "a",
-                            attrs: {href: "tel:8 (800) 350-50-20"},
-                            content: "8 (800) 350-50-20"
-                        },
-                        {
-                            elem: "call",
-                            content: "nfo@almakspravo.ru"
-                        }
-                    ]
-                },
-            ]
-        }*/
+                        ]
+                    },
+                    {
+                        block: "info",
+                        content: [
+                            {
+                                block: "contact",
+                                mods:{width: "min"},
+                                content: [
+                                    {
+                                        elem: "telephone",
+                                        elemMods: {color: "white"},
+                                        tag: "a",
+                                        attrs: {href: "tel:+7(495) 988-44-22"},
+                                        content: "+7(495) 988-44-22"
+                                    },
+                                    {
+                                        elem: "call",
+                                        tag: "a",
+                                        attrs : {href : "#"},
+                                        content: "Заказать звонок"
+                                    }
+                                ]
+                            },
+                            {
+                                block: "contact",
+                                mods:{width: "min"},
+                                content: [
+                                    {
+                                        elem: "telephone",
+                                        elemMods: {color: "white"},
+                                        tag: "a",
+                                        attrs: {href: "tel:8 (800) 350-50-20"},
+                                        content: "8 (800) 350-50-20"
+                                    },
+                                    {
+                                        elem: "call",
+                                        tag : 'a',
+                                        attrs : {href : "mailto:nfo@almakspravo.ru"},
+                                        content: "nfo@almakspravo.ru"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
     ]
 };

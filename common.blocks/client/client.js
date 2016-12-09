@@ -6,7 +6,7 @@ modules.define('client', ['i-bem__dom', 'owl-carousel'], function (provide, BEMD
             onSetMod : {
                 'js' : {
                     'inited' : function () {
-                        $(this.domElem).owlCarousel({
+                        $(this.elem("wrap")).owlCarousel({
                             autoPlay: false,
                             items : 3,
                             itemsDesktop : [1000,3], //5 items between 1000px and 901px

@@ -1,10 +1,13 @@
 .list_template_link
     margin-right 5px
+    margin-left 24px
 
     .list
 
         &__title
             color #FFFFFF
+            position relative
+            margin 5px 0 17px 0
 
             &:before
                 content ""
@@ -13,11 +16,13 @@
                 background-color #55af74
                 display inline-block
                 vertical-align super
-                margin-right 24px
+                position absolute
+                left -24px
+                top 4px
 
         &__link
             color #55af74
             text-decoration none
 
-        &__box
-            margin-left 24px
+        //&__box
+            //margin-left 24px
