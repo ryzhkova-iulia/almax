@@ -52,7 +52,7 @@ module.exports = {
                                     elem: "call",
                                     tag: "a",
                                     attrs: {
-                                        hrf: '#'
+                                        href: '#'
                                     },
                                     content: "Заказать звонок"
                                 }
@@ -64,7 +64,7 @@ module.exports = {
                                 {
                                     elem: "telephone",
                                     tag: "a",
-                                    attrs: {href: "tel:"},
+                                    attrs: {href: "tel: 8(800) 350-50-20"},
                                     content: "8(800) 350-50-20"
                                 },
                                 {
