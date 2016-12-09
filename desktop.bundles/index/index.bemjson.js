@@ -50,6 +50,10 @@ module.exports = {
                                 },
                                 {
                                     elem: "call",
+                                    tag: "a",
+                                    attrs: {
+                                        hrf: '#'
+                                    },
                                     content: "Заказать звонок"
                                 }
                             ]
@@ -65,7 +69,9 @@ module.exports = {
                                 },
                                 {
                                     elem: "call",
-                                    content: "info@almakspravo.ru"
+                                    tag : 'a',
+                                    attrs : {href : "mailto:nfo@almakspravo.ru"},
+                                    content: "nfo@almakspravo.ru"
                                 }
                             ]
                         },
