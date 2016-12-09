@@ -1,0 +1,12 @@
+{
+    "freeze_paths": {
+        "common.blocks/**/*.+(png|jpeg|gif)": ":base64:"
+    },
+
+    "paths" : {
+        "../../docs/": "./"
+    },
+    "follow_symlinks" : {
+        "./" : true
+    }
+}

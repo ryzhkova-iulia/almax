@@ -1,0 +1,6 @@
+{
+    "freeze_paths": {
+        "common.blocks/**/*.+(png|jpeg|gif)": ":base64:",
+        "libs/**/*.+(png|jpeg|gif)": ":base64:"
+    }
+}

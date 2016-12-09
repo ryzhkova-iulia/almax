@@ -279,7 +279,7 @@ module.exports = {
                                         {
                                             elem : 'img',
                                             tag : 'img',
-                                            attrs : {src : "./img/okapia.png"}
+                                            attrs : {src : "../../docs/img/okapia.png"}
                                         }
                                     ]
                                 },
@@ -291,7 +291,7 @@ module.exports = {
                                         {
                                             elem : 'img',
                                             tag : 'img',
-                                            attrs : {src : "./img/okapia.png"}
+                                            attrs : {src : "../../docs/img/okapia.png"}
                                         }
                                     ]
                                 },
@@ -303,7 +303,7 @@ module.exports = {
                                         {
                                             elem : 'img',
                                             tag : 'img',
-                                            attrs : {src : "./img/okapia.png"}
+                                            attrs : {src : "../../docs/img/okapia.png"}
                                         }
                                     ]
                                 },
@@ -315,7 +315,7 @@ module.exports = {
                                         {
                                             elem : 'img',
                                             tag : 'img',
-                                            attrs : {src : "./img/okapia.png"}
+                                            attrs : {src : "../../docs/img/okapia.png"}
                                         }
                                     ]
                                 },
@@ -327,7 +327,7 @@ module.exports = {
                                         {
                                             elem : 'img',
                                             tag : 'img',
-                                            attrs : {src : "./img/okapia.png"}
+                                            attrs : {src : "../../docs/img/okapia.png"}
                                         }
                                     ]
                                 }
@@ -500,7 +500,7 @@ module.exports = {
                                         {
                                             elem: 'img',
                                             tag: 'img',
-                                            attrs: {src: "./img/letter.png"}
+                                            attrs: {src: "../../docs/img/letter.png"}
                                         }
                                     ]
                                 },
@@ -512,7 +512,7 @@ module.exports = {
                                         {
                                             elem: 'img',
                                             tag: 'img',
-                                            attrs: {src: "./img/letter.png"}
+                                            attrs: {src: "../../docs/img/letter.png"}
                                         }
                                     ]
                                 },{
@@ -523,7 +523,7 @@ module.exports = {
                                         {
                                             elem: 'img',
                                             tag: 'img',
-                                            attrs: {src: "./img/letter.png"}
+                                            attrs: {src: "../../docs/img/letter.png"}
                                         }
                                     ]
                                 }

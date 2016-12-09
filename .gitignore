@@ -6,12 +6,14 @@ node_modules/
 .project
 .svn
 npm-debug.log
-
+.vagrant/
+*.log
 # bem
 .bem/cache/
 .enb/tmp/
 *bundles*/*/*.*
 !*bundles*/*/*.bemjson.js
+!*bundles*/*/*.borschik
 !*bundles*/.bem/*
 *pages*/*/*.*
 !*pages*/*/*.bemjson.js

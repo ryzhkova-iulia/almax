@@ -38,6 +38,8 @@
   },
   "scripts": {
     "start": "enb server",
+    "make": "enb make",
+    "publish": "cd docs/ && borschik --input=../desktop.bundles/index/index.html --output=index.html",
     "postinstall": "npm run deps",
     "deps": "bower i --allow-root"
   },

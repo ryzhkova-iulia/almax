@@ -12,6 +12,8 @@ var techs = {
         // js
         browserJs: require('enb-js/techs/browser-js'),
 
+        fileCopy: require('enb/techs/file-copy'),
+
         // bemtree
         // bemtree: require('enb-bemxjst/techs/bemtree'),
 
@@ -94,9 +96,22 @@ module.exports = function(config) {
 
             // borschik
             [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
-            [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }]
+            [techs.borschik, { source: '?.css', target: '?.min.css', minify: true}],
+
+            [techs.borschik, { source: '?.min.js', target: '../../docs/?.min.js', minify: true, freeze : true }],
+            [techs.borschik, { source: '?.min.css', target: '../../docs/?.min.css', minify: true, freeze : true }],
+
+            [techs.borschik, { source: '?.html', target: '../../docs/?.html', minify: isProd }]
         ]);
 
-        nodeConfig.addTargets([/*'?.bemhtml.js', */'?.html', '?.min.css', '?.min.js']);
+        nodeConfig.addTargets([
+            /*'?.bemhtml.js', */
+            '?.html',
+            '../../docs/?.html',
+            '../../docs/?.min.js',
+            '../../docs/?.min.css',
+            '?.min.css',
+            '?.min.js'
+        ]);
     });
 };
